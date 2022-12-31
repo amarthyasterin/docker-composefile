@@ -1,0 +1,14 @@
+version: "3"
+services:
+  sterinhost: 
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_USER: sterin
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: sterindb
+  app:
+    build: .
+    ports:
+      - 1000:80
+   
